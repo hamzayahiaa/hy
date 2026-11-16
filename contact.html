@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact : commander vos livres à Sousse | Librairie en ligne</title>
+  <meta name="description" content="Une question ou une commande ? Contactez notre librairie de Sousse par formulaire, téléphone ou email. Nous répondons rapidement et livrons partout en Tunisie.">
+  <link rel="canonical" href="https://VOTRE-SITE/contact.html">
+  <link rel="icon" type="image/svg+xml" href="images/logo-librairie-sousse.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Librairie en ligne de Sousse">
+  <meta property="og:title" content="Contact : commander vos livres à Sousse | Librairie en ligne">
+  <meta property="og:description" content="Une question ou une commande ? Contactez notre librairie de Sousse par formulaire, téléphone ou email. Nous répondons rapidement et livrons partout en Tunisie.">
+  <meta property="og:url" content="https://VOTRE-SITE/contact.html">
+  <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BookStore",
+  "name": "Librairie en ligne de Sousse",
+  "url": "https://VOTRE-SITE/",
+  "logo": "https://VOTRE-SITE/images/logo-librairie-sousse.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sousse",
+    "addressCountry": "TN"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo-librairie-sousse.svg" width="48" height="48" alt="Logo de la librairie en ligne de Sousse">
+      <span class="brand-name">Librairie</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul><li><a href="index.html">Accueil</a></li><li><a href="produits.html">Produits</a></li><li><a href="blog.html">Blog</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="panier.html">Panier <span class="badge" id="panier-compteur">0</span></a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section>
+      <h1 class="page-title">Contactez notre librairie à Sousse</h1>
+      <p>Une question sur un titre, une commande ou la livraison ? Écrivez-nous avec le formulaire ci-dessous, ou parcourez d'abord <a href="produits.html">notre catalogue</a>.</p>
+      <div class="two-col">
+        <form id="form-contact">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+          <p><button class="btn" type="submit">Envoyer</button></p>
+          <p id="statut" role="status"></p>
+        </form>
+        <div>
+          <h2>Nos coordonnées</h2>
+          <ul class="contact-list">
+            <li>Adresse : Sousse, Tunisie</li>
+            <li>Téléphone : +216 00 000 000</li>
+            <li>Email : contact@librairie-sousse.example</li>
+          </ul>
+          <h2>Suivez-nous</h2>
+          <ul class="contact-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Librairie en ligne de Sousse — Sousse, Tunisie</p>
+    <p>Livraison à domicile partout en Tunisie</p>
+    <p><a href="admin.html" rel="nofollow">Administration</a></p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/panier.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre panier | Librairie en ligne de Sousse</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="images/logo-librairie-sousse.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo-librairie-sousse.svg" width="48" height="48" alt="Logo de la librairie">
+      <span class="brand-name">Librairie</span>
+    </a>
+    <nav>
+      <ul><li><a href="index.html">Accueil</a></li><li><a href="produits.html">Produits</a></li><li><a href="blog.html">Blog</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="panier.html" aria-current="page">Panier <span class="badge" id="panier-compteur">0</span></a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section>
+      <h1 class="page-title">Votre panier</h1>
+      <div id="panier-contenu"></div>
+      <p id="message-commande" role="status"></p>
+      <form id="form-commande" hidden>
+        <h2>Vos coordonnées</h2>
+        <label for="nom">Nom et prénom</label>
+        <input id="nom" name="nom" type="text" required autocomplete="name">
+        <label for="tel">Téléphone</label>
+        <input id="tel" name="tel" type="tel" required autocomplete="tel">
+        <label for="adresse">Adresse de livraison</label>
+        <textarea id="adresse" name="adresse" required autocomplete="street-address"></textarea>
+        <p class="note">Paiement à la livraison.</p>
+        <p><button id="bouton-commande" class="btn" type="submit">Valider la commande</button></p>
+      </form>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Librairie — Sousse, Tunisie</p>
+    <p>Livraison à domicile partout en Tunisie</p>
+    <p><a href="admin.html" rel="nofollow">Administration</a></p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/panier.js"></script>
+<script src="js/panier-page.js"></script>
+</body>
+</html>

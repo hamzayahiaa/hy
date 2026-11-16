@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administration | Librairie</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="images/logo-librairie-sousse.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo-librairie-sousse.svg" width="48" height="48" alt="Logo de la librairie">
+      <span class="brand-name">Librairie</span>
+    </a>
+    <nav>
+      <ul><li><a href="index.html">Accueil</a></li><li><a href="produits.html">Produits</a></li><li><a href="blog.html">Blog</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="panier.html">Panier <span class="badge" id="panier-compteur">0</span></a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section id="vue-connexion">
+      <h1 class="page-title">Espace administrateur</h1>
+      <form id="form-connexion" class="form-etroit">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="username">
+        <label for="motdepasse">Mot de passe</label>
+        <input id="motdepasse" name="motdepasse" type="password" required autocomplete="current-password">
+        <p><button class="btn" type="submit">Se connecter</button></p>
+        <p id="message-connexion" role="status"></p>
+      </form>
+    </section>
+
+    <section id="vue-admin" hidden>
+      <div class="barre-admin">
+        <h1 class="page-title">Administration</h1>
+        <p><span id="info-utilisateur"></span> <button id="bouton-deconnexion" class="btn btn-petit" type="button">Se déconnecter</button></p>
+      </div>
+      <div class="onglets">
+        <button type="button" class="onglet" data-onglet="commandes">Commandes</button>
+        <button type="button" class="onglet" data-onglet="messages">Messages</button>
+        <button type="button" class="onglet" data-onglet="produits">Produits</button>
+      </div>
+      <p id="message-admin" role="status"></p>
+
+      <div id="panneau-commandes"><div id="liste-commandes"></div></div>
+      <div id="panneau-messages" hidden><div id="liste-messages"></div></div>
+
+      <div id="panneau-produits" hidden>
+        <table class="table-panier">
+          <thead><tr><th>Photo</th><th>Nom</th><th>Catégorie</th><th>Prix</th><th>Actions</th></tr></thead>
+          <tbody id="corps-produits"></tbody>
+        </table>
+        <form id="form-produit" class="form-etroit">
+          <h2 id="titre-form-produit">Ajouter un produit</h2>
+          <input type="hidden" name="id">
+          <label for="p-nom">Nom</label>
+          <input id="p-nom" name="nom" type="text" required>
+          <label for="p-categorie">Catégorie</label>
+          <input id="p-categorie" name="categorie" type="text">
+          <label for="p-prix">Prix (DT)</label>
+          <input id="p-prix" name="prix" type="number" min="0" step="0.001" required>
+          <label for="p-photo">Photo (JPG ou PNG, 2 Mo maximum)</label>
+          <input id="p-photo" name="photo" type="file" accept="image/*">
+          <p id="photo-actuelle" class="note"></p>
+          <p><button class="btn" type="submit">Enregistrer</button> <button id="annuler-produit" class="btn btn-secondary" type="button">Annuler</button></p>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Librairie — Sousse, Tunisie</p>
+    <p>Livraison à domicile partout en Tunisie</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/panier.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
